@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.App {
+    width: 800px;
+}
+h1 {
+    padding-top: 15px;
+}
+
+.posts {
+    display: flex;
+    border: 1px solid teal;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.myPostCard {
+    width: 100%;
+}
+
+.deleteBtn {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(202, 12, 12);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.myForm {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+}
