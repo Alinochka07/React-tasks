@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import MyButton from './UI/button/MyButton';
 
 const PostItem = (props) => {
 
@@ -9,7 +9,9 @@ const PostItem = (props) => {
                 <strong>{props.number}. {props.post.title}</strong>
                 <p>{props.post.body}</p>
             </div>
-            <button className='deleteBtn'>Delete</button>
+            <MyButton style={{'backgroundColor': 'red'}} 
+            onClick={() => props.remove(props.post)}
+            >Delete</MyButton>
         </div>
     );
 };
