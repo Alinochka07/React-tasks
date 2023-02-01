@@ -5,12 +5,18 @@
 }
 
 #root {
-    margin-top: 50px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .App {
     width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 h1 {
     padding-top: 15px;
@@ -47,4 +53,112 @@ h1 {
     align-content: space-between;
     align-items: stretch;
     margin-bottom: 30px;
+}
+
+.post-enter {
+    opacity: 0;
+  }
+  .post-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .post-exit {
+    opacity: 1;
+  }
+  .post-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+
+.page__wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.page {
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 35px;
+    text-align: center;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+.page__current {
+    border: 1px solid white;
+    width: 35px;
+    background-color: orange;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.navbar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin: 0;
+    background-color:teal;
+}
+
+.navbar__links {
+    text-decoration: none;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+.post-page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 950px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    align-content: center;
+}
+
+.comments {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.comment {
+    width: 293px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+.header-text {
+    height: max-content;
+    border-bottom: 1px solid teal;
+    padding: 10px 5px;
+}
+.comment-body {
+    padding: 5px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+}
+
+.divdiv {
+    background: red;
+    height: 20px;
 }

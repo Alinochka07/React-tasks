@@ -13,10 +13,10 @@ const PostFilter = ({filter, setFilter}) => {
                 <MySelect 
                 value={filter.sort}
                 onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
-                defaultValue='Filter posts by' 
+                defaultValue='Filter by ID' 
                 options={[
-                    {value: 'title', name: 'By title'},
-                    {value: 'body', name: 'By description'}
+                    {value: 'title', name: 'Filter by title'},
+                    {value: 'body', name: 'Filter by description'}
                 ]}/>
         </div>
     );

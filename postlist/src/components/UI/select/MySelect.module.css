@@ -1,0 +1,9 @@
+.MySelect {
+    height: 30px;
+    border: 1px solid #008080;
+    border-radius: 5px;
+    color: white;
+    background: #0d6548;
+    width: 166px;
+    text-align: center;
+}
