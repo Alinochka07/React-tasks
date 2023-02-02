@@ -27,11 +27,11 @@ function Posts() {
   const [totalPages, setTotalPages] = useState(0);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(0);
-  const lastElement = useRef();
+  // const lastElement = useRef();
   
   const [fetchPosts, isPostLoading, postError] = useFetching(async () => {
     const response = await PostService.getAll(limit, page);
-    setPosts([...posts, ...response.data]);
+    setPosts([...response.data]);
     const totalCount = response.headers['x-total-count']
     setTotalPages(getPageCount(totalCount, limit))
   })
@@ -54,7 +54,7 @@ function Posts() {
   }
 
   const changePage = (page) => {
-    setPage(page += 1)
+    setPage(page)
   }
 
 
@@ -84,7 +84,7 @@ function Posts() {
       }
 
       <PostList posts={sortedAndSearchedPosts} remove={removePost} title={"List of JavaScript Items"}/>
-      <div ref={lastElement}></div>
+      {/* <div ref={lastElement}></div> */}
 
       {isPostLoading &&
         <div style={{'display': 'flex', 'justifyContent': 'center', 'marginTop':'20px'}}>

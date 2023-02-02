@@ -2,7 +2,9 @@ import React, {useContext} from 'react';
 import MyButton from '../components/UI/button/MyButton';
 import MyInput from '../components/UI/input/MyInput';
 import { AuthContext } from '../context';
-import "../styles/App.css"
+import "../styles/App.css";
+import { Link } from 'react-router-dom';
+import Register from './Register';
 
 const Login = () => {
 
@@ -17,10 +19,11 @@ const Login = () => {
         <div className='login-page'>
             <h1>Login page</h1>
             <form onSubmit={login}>
-                <MyInput type="text" placeholder="Enter your login"/>
+                <MyInput type="email" placeholder="Enter your email"/>
                 <MyInput type="password" placeholder="Enter your password"/>
                 <MyButton>Log in</MyButton>
             </form>
+            <p>New user? Then register <Link to="/register">here</Link></p>
         </div>
     );
 };

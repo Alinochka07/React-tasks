@@ -2,6 +2,7 @@ import About from "../pages/About";
 import Posts from "../pages/Posts";
 import PostIdPage from "../pages/PostIdPage";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 
 export const privateRoutes = [
@@ -13,5 +14,6 @@ export const privateRoutes = [
 
 export const publicRoutes = [
     {path: '/login', element: <Login/>, exact: true},
+    {path: '/register', element: <Register/>, exact: true},
     {path: '*', element: <Login/>, exact: false}
 ]

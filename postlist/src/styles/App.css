@@ -144,7 +144,7 @@ h2 {
     padding: 5px;
 }
 
-.login-page {
+.login-page, .register-page {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -156,6 +156,7 @@ form {
     flex-wrap: wrap;
     justify-content: center;
     width: 400px;
+    margin-bottom: 20px;
 }
 
 .divdiv {
